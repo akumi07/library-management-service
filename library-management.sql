@@ -30,3 +30,14 @@ create table employees (
 
 select * from employees
 
+create table books (
+    isbn,
+    book_title,
+	category,
+	rental_price,
+	status,
+	author,
+	publisher
+
+)
+
