@@ -33,13 +33,13 @@ select * from employees
 drop table if EXISTS books
 
 create table books (
-    isbn,
-    book_title,
-	category,
-	rental_price,
-	status,
-	author,
-	publisher
+    isbn VARCHAR(17) PRIMARY KEY,
+    book_title VARCHAR(75),
+	category VARCHAR(10),
+	rental_price FLOAT,
+	status VARCHAR(10),
+	author VARCHAR(35),
+	publisher VARCHAR(55)
 
 )
 
