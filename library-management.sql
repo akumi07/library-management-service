@@ -30,6 +30,8 @@ create table employees (
 
 select * from employees
 
+drop table if EXISTS books
+
 create table books (
     isbn,
     book_title,
