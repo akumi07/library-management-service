@@ -43,3 +43,39 @@ create table books (
 
 )
 
+select * from books
+
+create table issued_status(
+    issued_id	VARCHAR(5) PRIMARY KEY,
+    issued_member_id VARCHAR(4),	
+    issued_book_name VARCHAR(35),
+    issued_date	DATE,
+    issued_book_isbn VARCHAR(25),	
+    issued_emp_id VARCHAR(10)
+
+)
+
+select * from issued_status
+
+
+create table members(
+    member_id VARCHAR(10),	
+    member_name VARCHAR(25)	,
+    member_address VARCHAR(75),	
+    reg_date DATE
+
+)
+
+ALTER TABLE members
+ADD PRIMARY KEY (member_id);
+
+
+create table return_status(
+    return_id VARCHAR(10) PRIMARY KEY,	
+    issued_id VARCHAR(10),	
+    return_book_name VARCHAR(75),	
+    return_date	DATE,
+    return_book_isbn VARCHAR(20)
+
+)
+
