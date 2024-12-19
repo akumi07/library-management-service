@@ -107,4 +107,24 @@ ADD CONSTRAINT fk_books
 FOREIGN KEY (issued_book_isbn)
 REFERENCES books(isbn);
 
+ALTER TABLE employees
+ADD CONSTRAINT fk_branch
+FOREIGN KEY (branch_id)
+REFERENCES  branch(branch_id);
+
+
+select issued_id from return_status
+where issued_id NOT IN (SELECT issued_id from issued_status)
+
+DELETE FROM return_status
+WHERE issued_id NOT IN (
+    SELECT issued_id FROM issued_status
+);
+
+
+ALTER TABLE return_status
+ADD CONSTRAINT fk_issued_id
+FOREIGN KEY (issued_id)
+REFERENCES issued_status (issued_id);
+
 
