@@ -79,3 +79,32 @@ create table return_status(
 
 )
 
+ALTER TABLE issued_status
+ADD CONSTRAINT fk_members
+FOREIGN KEY (issued_member_id)
+REFERENCES members(member_id);
+
+ALTER TABLE issued_status
+ADD CONSTRAINT fk_employees
+FOREIGN KEY (issued_emp_id)
+REFERENCES employees(emp_id);
+
+
+SELECT issued_book_isbn
+FROM issued_status
+WHERE issued_book_isbn NOT IN (
+    SELECT isbn FROM books
+);
+
+DELETE FROM issued_status
+WHERE issued_book_isbn NOT IN (
+    SELECT isbn FROM books
+);
+
+
+ALTER TABLE issued_status
+ADD CONSTRAINT fk_books
+FOREIGN KEY (issued_book_isbn)
+REFERENCES books(isbn);
+
+
