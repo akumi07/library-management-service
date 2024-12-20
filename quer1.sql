@@ -66,5 +66,11 @@ INSERT INTO books(isbn,
     update members
     set member_address="Kanpur"
     where member_id='C101'
-    
+
     select * from members
+
+
+    Delete from issued_status
+    where issued_id = 'IS104' 
+
+    select * from issued_status
