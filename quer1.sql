@@ -60,4 +60,11 @@ INSERT INTO books(isbn,
     VALUES( '978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')
 
     select * from books
+
+    select * from members
+
+    update members
+    set member_address="Kanpur"
+    where member_id='C101'
     
+    select * from members
