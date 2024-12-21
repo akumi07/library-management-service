@@ -127,4 +127,6 @@ ADD CONSTRAINT fk_issued_id
 FOREIGN KEY (issued_id)
 REFERENCES issued_status (issued_id);
 
+select * from employees
+
 

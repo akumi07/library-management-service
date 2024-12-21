@@ -74,3 +74,10 @@ INSERT INTO books(isbn,
     where issued_id = 'IS104' 
 
     select * from issued_status
+
+    select* from books
+
+
+    select issued_book_name
+    from issued_status
+    where issued_emp_id='E101'
