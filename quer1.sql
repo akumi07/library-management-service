@@ -106,7 +106,7 @@ issued_status ist
 On ist.issued_book_isbn=b.isbn
 WHERE conditions;
 
-
+Create table Summary AS
 SELECT b.isbn,
 b.book_title,
 Count(ist.issued_book_isbn) AS total_no_issue
@@ -115,3 +115,5 @@ Join
 issued_status as ist
 On ist.issued_book_isbn=b.isbn
 Group By b.isbn,b.book_title
+
+select *  from Summary  
