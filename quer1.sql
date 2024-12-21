@@ -93,3 +93,25 @@ INSERT INTO books(isbn,
     
     Group by issued_emp_id
     HAVING Count(issued_book_name)>1
+
+
+
+Select * from books
+
+CREATE TABLE Summary AS
+SELECT book_title
+FROM books b
+Join 
+issued_status ist
+On ist.issued_book_isbn=b.isbn
+WHERE conditions;
+
+
+SELECT b.isbn,
+b.book_title,
+Count(ist.issued_book_isbn) AS total_no_issue
+FROM books as b
+Join 
+issued_status as ist
+On ist.issued_book_isbn=b.isbn
+Group By b.isbn,b.book_title
