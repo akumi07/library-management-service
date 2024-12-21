@@ -78,6 +78,18 @@ INSERT INTO books(isbn,
     select* from books
 
 
+    select * from issued_status
+    where issued_emp_id='E107'
+
+
     select issued_book_name
     from issued_status
     where issued_emp_id='E101'
+
+    select issued_emp_id,
+    Count(issued_book_name) As issue_count
+
+    from issued_status
+    
+    Group by issued_emp_id
+    HAVING Count(issued_book_name)>1
