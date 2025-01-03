@@ -115,7 +115,7 @@ WHERE DATEDIFF(CURDATE(), reg_date) <= 250;
 
 
 
-select e1.emp_id,e2.emp_name as branch_manager,b.branch_address
+select e1.emp_id,e2.emp_name as branch_manager,b.branch_address,b.contact_no
 from employees as e1
 join branch  as b
 on b.branch_id=e1.branch_id
