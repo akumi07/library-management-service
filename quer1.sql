@@ -120,7 +120,7 @@ from employees as e1
 join branch  as b
 on b.branch_id=e1.branch_id
 join employees as e2
-on e2.emp_id=e1.emp_id
+on b.manager_id=e2.emp_id
 
 
 select * from branch
