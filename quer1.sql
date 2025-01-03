@@ -109,4 +109,18 @@ FROM members;
  GROUP By (b.category)
 
 
- 
+ SELECT *
+FROM members
+WHERE DATEDIFF(CURDATE(), reg_date) <= 250;
+
+
+
+select *
+from employees as e1
+join branch  as b
+on b.branch_id=e.branch_id
+join employees as e2
+on e2.emp_id=e1.emp_id
+
+
+select * from branch
